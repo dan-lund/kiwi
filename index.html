@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tauri Model Loader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Guesser</h1>
+      
+      <label for="image-upload" class="upload-area" id="upload-area">
+        <div class="upload-icon">📁</div>
+        <label class="upload-label">
+          <div class="upload-text">Click to browse</div>
+          <div class="upload-subtext">Supports JPG only</div>
+        </label>
+        <input type="file" id="image-upload" accept="image/*" />
+        <div class="selected-file" id="selected-file" style="display: none;">
+          <div class="file-name" id="file-name"></div>
+        </div>
+      </label>
+
+      <button id="load-model-btn" class="guess-btn" disabled>
+        <div class="loading-spinner" id="loading-spinner"></div>
+        <span class="btn-text">Analyse Image</span>
+      </button>
+
+      <div id="status" class="status" style="display: none;"></div>
+    </div>
+
+    <script type="module" src="src/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #8BC34A 0%, #4CAF50 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(76, 175, 80, 0.15);
+  max-width: 500px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 195, 74, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #2E7D32;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.upload-area {
+  display: block;
+  border: 2px dashed #C8E6C9;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: #f8fff8;
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.upload-area:hover {
+  border-color: #8BC34A;
+  background: #f0fff0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(139, 195, 74, 0.15);
+}
+
+.upload-area.drag-over {
+  border-color: #8BC34A;
+  background: #e8f5e9;
+  transform: scale(1.02);
+}
+
+#image-upload {
+  display: none;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  color: #C8E6C9;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.upload-area:hover .upload-icon {
+  color: #8BC34A;
+}
+
+.upload-text {
+  margin-bottom: 10px;
+  color: #2E7D32;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.upload-subtext {
+  font-size: 0.9rem;
+  color: #689F38;
+}
+
+.selected-file {
+  margin-top: 15px;
+  padding: 15px;
+  background: #e8f5e9;
+  border-radius: 10px;
+  border: 1px solid #c8e6c9;
+  animation: fadeIn 0.3s ease;
+}
+
+.selected-file .file-name {
+  font-weight: 600;
+  color: #2e7d32;
+  word-break: break-all;
+}
+
+.guess-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #8BC34A, #4CAF50);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 195, 74, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.guess-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 195, 74, 0.6);
+}
+
+.guess-btn:active {
+  transform: translateY(0);
+}
+
+.guess-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+.loading-spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 2px solid white;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+.status {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.status.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+  animation: slideInUp 0.3s ease;
+}
+
+.status.error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  animation: shake 0.5s ease;
+}
+
+.status.loading {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    padding: 25px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .upload-area {
+    padding: 20px;
+  }
+}
