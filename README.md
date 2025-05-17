@@ -6,11 +6,8 @@
 
 -   **Lightweight:** Minimal resource usage thanks to Tauri and tract.
     
--   **Offline image recognition:** Uses the MobileNet ONNX model to classify images locally.
+-   **Offline image recognition:** Uses the MobileNet ONNX model to classify images locally, no internet connection required.
     
--   **Cross-platform:** Runs on Windows, macOS, and Linux.
-    
-
 ## Installation 
 ### From pre-built releases
 
@@ -22,7 +19,7 @@
 
 Make sure you have Rust and Node.js installed.
 
-git clone https://github.com/dan-lund/kiwi.git 
-cd kiwi
-npm install
-npm run tauri build`
+git clone https://github.com/dan-lund/kiwi.git  
+cd kiwi  
+npm install  
+npm run tauri build
