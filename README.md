@@ -19,7 +19,9 @@
 
 Make sure you have Rust and Node.js installed.
 
+```
 git clone https://github.com/dan-lund/kiwi.git  
 cd kiwi  
 npm install  
 npm run tauri build
+```
