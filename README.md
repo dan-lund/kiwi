@@ -11,7 +11,7 @@
 ## Installation 
 ### From pre-built releases
 
-1.  Download the latest release for your OS from the [Releases](https://github.com/yourusername/kiwi/releases) page.
+1.  Download the latest release from the [Releases](https://github.com/dan-lund/kiwi/releases) page.
     
 2.  Run the installer or unzip and launch the app.
 
