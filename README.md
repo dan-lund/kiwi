@@ -25,3 +25,12 @@ cd kiwi
 npm install  
 npm run tauri build
 ```
+
+## Showcase
+<p align="center">
+  <img src="https://i.gyazo.com/d604a7afa7106e260b93d9e900717634.png" alt="Image 1" width="300"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://i.gyazo.com/982f79d95553ae26ce0e6e40424c5bd3.png" alt="Image 2" width="300"/>
+</p>
+
+
