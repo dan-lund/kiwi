@@ -48,7 +48,7 @@ async function handleModelLoad() {
     const arrayBuffer = await currentFile.arrayBuffer();
     const bytes = Array.from(new Uint8Array(arrayBuffer));
 
-    const result = await invoke('try_load_model', { imageBytes: bytes });
+    const result = await invoke('run_inference', { imageBytes: bytes });
     console.log('✅ Result from Rust:', result);
     
     showStatus(`${result}`, 'success');
