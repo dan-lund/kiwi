@@ -1,6 +1,6 @@
 # Kiwi 🥝
 
-**Kiwi** is a tiny, cross-platform image guesser app built with Tauri. It classifies images instantly right on your desktop using MobileNet ONNX.
+**Kiwi** is a tiny image guesser app built with Tauri. It classifies images instantly right on your desktop using MobileNet ONNX.
 
 ## Features
 
